@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#b77b83">
+<title>دعوة خاصة | بشار وبيان</title>
+<meta name="description" content="دعوة خاصة لمناسبة سعيدة. يسعدنا حضوركم ومشاركتنا فرحتنا.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دعوة خاصة لمناسبة سعيدة">
+<meta property="og:description" content="يسعدنا حضوركم ومشاركتنا فرحتنا. افتحوا الرابط لاكتشاف الدعوة.">
+<meta property="og:image" content="https://bashar203.github.io/Bashar_Bayan/whatsapp-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--rose:#b77b83;--rose-dark:#713842;--cream:#f8e9e5;--gold:#c49a61}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#d8aeb1}
+body{margin:0;min-height:100svh;color:var(--rose-dark);font-family:Georgia,"Times New Roman",serif;
+ background:radial-gradient(ellipse at 50% 20%,#f5dfe0 0,#e9c4c6 55%,#c58e96 100%);overflow-x:hidden}
+main{position:relative;z-index:1;width:100%;padding:clamp(8px,2vw,24px) 10px 34px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.invitation{position:relative;width:min(100%,560px);line-height:0;filter:drop-shadow(0 12px 24px rgba(92,43,51,.22))}
+.invitation img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:2px}
+.hotspot{position:absolute;display:block;z-index:4;border-radius:60px;background:transparent;outline-offset:3px}
+.hotspot:focus-visible{outline:3px solid #fff;box-shadow:0 0 0 6px var(--gold)}
+/* Invisible clickable area exactly over the printed "Open invitation" button. */
+.open-hotspot{left:25%;top:77.2%;width:50%;height:6.2%}
+.details-hotspot{left:29%;top:78%;width:42%;height:5.8%}
+.countdown-wrap{width:min(100%,560px);padding:22px 16px 24px;text-align:center;border:1px solid rgba(196,154,97,.85);
+ border-radius:24px;background:rgba(250,235,230,.78);box-shadow:0 8px 24px rgba(100,48,56,.12);backdrop-filter:blur(5px)}
+.kicker{margin:0 0 14px;font-size:clamp(18px,4vw,23px);color:#8b4c56}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;direction:rtl}
+.unit{padding:12px 4px;border:1px solid rgba(196,154,97,.8);border-radius:14px;background:rgba(255,249,245,.72)}
+.num{display:block;font-size:clamp(25px,7vw,38px);font-weight:bold;color:#793b46;line-height:1.1;font-variant-numeric:tabular-nums}
+.label{display:block;margin-top:6px;font-size:14px;color:#87545a}
+.event-info{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.info{padding:10px 5px;border-inline-start:1px solid rgba(196,154,97,.65);font-size:14px;line-height:1.6}
+.info:first-child{border:0}
+.info strong{display:block;color:#783d47;font-size:15px}
+.map-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;padding:12px 30px;border-radius:999px;
+ background:linear-gradient(180deg,#bd7e87,#873f4b);border:2px solid #d9b77e;color:#fff;text-decoration:none;font-size:18px;
+ box-shadow:0 4px 12px rgba(93,43,52,.2)}
+.map-link:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.note{margin:14px 0 0;font-size:15px;color:#87545a}
+.petal{position:fixed;top:-12vh;z-index:5;pointer-events:none;width:17px;height:29px;border-radius:90% 8% 90% 8%;
+ background:linear-gradient(135deg,#f7c8ce 0%,#d78391 55%,#a95769 100%);opacity:.72;
+ box-shadow:inset 2px 1px 3px rgba(255,255,255,.65),0 2px 5px rgba(95,42,53,.12);
+ animation:fall linear infinite}
+@keyframes fall{0%{transform:translate3d(0,-12vh,0) rotate(0deg)}50%{transform:translate3d(50px,55vh,0) rotate(210deg)}100%{transform:translate3d(-35px,115vh,0) rotate(420deg)}}
+.hidden{display:none!important}
+@media(min-width:900px){main{padding-top:28px}.invitation{width:min(48vw,560px)}}
+@media(max-width:430px){main{padding:0 0 26px;gap:14px}.invitation{width:100%;filter:none}.countdown-wrap{width:calc(100% - 22px);padding:18px 10px}.unit{padding:10px 2px}.label{font-size:12px}.event-info{gap:2px}.info{font-size:12px}.info strong{font-size:13px}.map-link{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.petal{animation:none;display:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="petals" aria-hidden="true"></div>
+<main>
+  <section class="invitation" id="page-one" aria-label="بطاقة الدعوة الأولى">
+    <img src="page1.jpg" width="864" height="1536" alt="بطاقة الدعوة الأولى">
+    <a class="hotspot open-hotspot" href="#page-two" aria-label="افتح الدعوة"></a>
+  </section>
+
+  <section class="invitation hidden" id="page-two" aria-label="تفاصيل الدعوة">
+    <img src="page2.jpg" width="864" height="1536" alt="تفاصيل دعوة خطوبة بشار وبيان">
+    <a class="hotspot details-hotspot" href="https://maps.app.goo.gl/KqMsWvNdrJpMP1V46?g_st=ic" target="_blank" rel="noopener" aria-label="موقع القاعة على الخريطة"></a>
+  </section>
+
+  <section class="countdown-wrap hidden" id="live-details" aria-label="العد التنازلي والتفاصيل">
+    <h1 class="kicker">العدّ التنازلي للمناسبة</h1>
+    <div class="countdown" aria-live="off">
+      <div class="unit"><span class="num" id="days">--</span><span class="label">يوم</span></div>
+      <div class="unit"><span class="num" id="hours">--</span><span class="label">ساعة</span></div>
+      <div class="unit"><span class="num" id="minutes">--</span><span class="label">دقيقة</span></div>
+      <div class="unit"><span class="num" id="seconds">--</span><span class="label">ثانية</span></div>
+    </div>
+    <div class="event-info">
+      <div class="info"><strong>الوقت</strong>5:30 مساءً – 8:00 مساءً</div>
+      <div class="info"><strong>التاريخ</strong>الثلاثاء<br>8 ديسمبر 2026</div>
+      <div class="info"><strong>المكان</strong>قاعات كريستال<br>عمّان، الأردن</div>
+    </div>
+    <a class="map-link" href="https://maps.app.goo.gl/KqMsWvNdrJpMP1V46?g_st=ic" target="_blank" rel="noopener">⌖　موقع القاعة على الخريطة</a>
+    <p class="note">بانتظار مشاركتكم فرحتنا 🌸</p>
+  </section>
+</main>
+<script>
+(function(){
+ const params=new URLSearchParams(location.search);
+ const showDetails=location.hash==="#page-two" || params.get("page")==="2";
+ const one=document.getElementById("page-one"),two=document.getElementById("page-two"),extra=document.getElementById("live-details");
+ function showPage2(){one.classList.add("hidden");two.classList.remove("hidden");extra.classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"});startCountdown();}
+ if(showDetails) showPage2();
+ document.querySelector(".open-hotspot").addEventListener("click",function(e){e.preventDefault();history.replaceState(null,"", "#page-two");showPage2();});
+ function startCountdown(){
+   const target=new Date("2026-12-08T17:30:00+03:00").getTime();
+   function tick(){let diff=Math.max(0,target-Date.now());const vals={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};
+    Object.keys(vals).forEach(k=>document.getElementById(k).textContent=String(vals[k]).padStart(2,"0"));
+   }tick();setInterval(tick,1000);
+ }
+ const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(!reduce){const root=document.getElementById("petals");for(let i=0;i<18;i++){const p=document.createElement("i");p.className="petal";p.style.left=(Math.random()*100)+"vw";p.style.animationDuration=(9+Math.random()*12)+"s";p.style.animationDelay=(-Math.random()*18)+"s";p.style.transform="scale("+(0.65+Math.random()*0.7)+")";root.appendChild(p);}}
+})();
+</script>
+</body>
+</html>
