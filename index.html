@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7e4e4">
+<meta property="og:title" content="دعوة خطوبة بشار وبيان">
+<meta property="og:description" content="بكل الحب، نتشرف بمشاركتكم فرحتنا">
+<meta property="og:image" content="first-page.png">
+<title>دعوة خطوبة بشار وبيان</title>
+<style>
+:root{--blush:#f7e4e4;--wine:#8f4054;--gold:#c89a55}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--blush)}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at center,#fff8f5 0%,#f8e7e7 58%,#efd0d5 100%);font-family:Georgia,serif;overflow-x:hidden}
+.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:12px;position:relative;isolation:isolate}
+.art-wrap{position:relative;width:min(100%, min(760px, 94vh * .75));margin:auto;line-height:0;filter:drop-shadow(0 14px 28px rgba(116,48,65,.16));}
+.art-wrap img{display:block;width:100%;height:auto;border-radius:2px}
+/* Hotspots sit exactly over the seal and the printed invitation button. */
+.open-hotspot{position:absolute;display:block;border:0;background:transparent;cursor:pointer;border-radius:50%;-webkit-tap-highlight-color:transparent}
+.open-hotspot:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.seal-hotspot{left:36%;top:63%;width:28%;height:17%}
+.button-hotspot{left:27%;top:83%;width:46%;height:8%;border-radius:40px}
+.petal-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.petal{position:absolute;top:-12vh;width:15px;height:24px;border-radius:85% 10% 85% 10%;background:linear-gradient(145deg,#f8cbd3,#d77f99);opacity:.72;box-shadow:0 2px 7px #b66b8033;animation:fall linear infinite}
+.petal:nth-child(1){left:7%;animation-duration:11s;animation-delay:-7s;transform:scale(.8)}
+.petal:nth-child(2){left:19%;animation-duration:14s;animation-delay:-3s;transform:scale(1.15)}
+.petal:nth-child(3){left:33%;animation-duration:10s;animation-delay:-8s;transform:scale(.65)}
+.petal:nth-child(4){left:48%;animation-duration:13s;animation-delay:-5s;transform:scale(1.1)}
+.petal:nth-child(5){left:63%;animation-duration:11s;animation-delay:-1s;transform:scale(.75)}
+.petal:nth-child(6){left:78%;animation-duration:15s;animation-delay:-9s;transform:scale(1.2)}
+.petal:nth-child(7){left:91%;animation-duration:12s;animation-delay:-4s;transform:scale(.8)}
+@keyframes fall{0%{translate:0 -12vh;rotate:0deg}25%{translate:35px 25vh;rotate:120deg}55%{translate:-25px 58vh;rotate:260deg}100%{translate:30px 115vh;rotate:520deg}}
+#invitation{display:none;min-height:100svh;padding:24px 14px 50px;align-items:center;justify-content:center;flex-direction:column;gap:18px;opacity:0;transition:opacity .65s ease}
+#invitation.visible{display:flex}
+#invitation.show{opacity:1}
+.card-image{display:block;width:min(100%,650px);height:auto;box-shadow:0 15px 38px #74304426}
+.back{border:1px solid #c99b63;color:#884454;background:#fff7f3;border-radius:30px;padding:10px 24px;font-size:16px;cursor:pointer}
+@media(min-width:900px){.screen{padding:22px}.art-wrap{width:auto;height:min(94svh,1100px);max-width: min(760px,90vw)}.art-wrap img{height:100%;width:auto;max-width:100%;object-fit:contain}}
+@media(max-width:480px){.screen{padding:0}.art-wrap{width:100%;filter:none}.art-wrap img{border-radius:0}.seal-hotspot{top:63%;height:17%}.button-hotspot{top:83%;height:8%}.petal{width:12px;height:19px}}
+@media(prefers-reduced-motion:reduce){.petal{display:none}html{scroll-behavior:auto}#invitation{transition:none}}
+</style>
+</head>
+<body>
+<div class="petal-layer" aria-hidden="true">
+ <i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i><i class="petal"></i>
+</div>
+<main>
+ <section class="screen" id="welcome" aria-label="الصفحة الأولى للدعوة">
+  <div class="art-wrap">
+   <img src="first-page.png" alt="دعوة خطوبة بشار وبيان، عائلتا العويوي والرجوب">
+   <button class="open-hotspot seal-hotspot" type="button" aria-label="افتح الدعوة" onclick="openInvitation()"></button>
+   <button class="open-hotspot button-hotspot" type="button" aria-label="افتح الدعوة" onclick="openInvitation()"></button>
+  </div>
+ </section>
+ <section id="invitation" aria-label="بطاقة الدعوة">
+  <img class="card-image" src="invitation-card.jpg" alt="بطاقة دعوة خطوبة بشار وبيان">
+  <button class="back" type="button" onclick="backToWelcome()">العودة للواجهة الأولى</button>
+ </section>
+</main>
+<script>
+function openInvitation(){
+ const welcome=document.getElementById('welcome');
+ const invitation=document.getElementById('invitation');
+ welcome.style.display='none';
+ invitation.classList.add('visible');
+ requestAnimationFrame(()=>{invitation.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});});
+ history.replaceState(null,'','#invitation');
+}
+function backToWelcome(){
+ const invitation=document.getElementById('invitation');
+ invitation.classList.remove('show');
+ setTimeout(()=>{invitation.classList.remove('visible');document.getElementById('welcome').style.display='flex';window.scrollTo({top:0,behavior:'smooth'});},350);
+ history.replaceState(null,'',location.pathname);
+}
+if(location.hash==='#invitation') openInvitation();
+</script>
+</body>
+</html>
