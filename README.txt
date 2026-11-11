@@ -1,1 +1,0 @@
-ارفع جميع الملفات إلى جذر مستودع GitHub Pages على main. تأكد من وجود index.html و page1.jpg و page2.jpg و whatsapp-preview.jpg في الجذر.
